@@ -1,0 +1,33 @@
+plugins {
+    id 'scala'
+    // IDE usage
+    id 'eclipse'
+    id 'idea'
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation group: 'com.github.spinalhdl', name: 'spinalhdl-core_2.12', version: '1.5.0'
+	implementation group: 'com.github.spinalhdl', name: 'spinalhdl-lib_2.12', version: '1.5.0'
+	scalaCompilerPlugins 'com.github.spinalhdl:spinalhdl-idsl-plugin_2.12:1.5.0'
+}
+
+sourceCompatibility = 8
+
+task runVerilog(type: JavaExec) {
+    classpath = sourceSets.main.runtimeClasspath
+    main = "mylib.MyTopLevelVerilog"
+}
+
+task runVhdl(type: JavaExec) {
+    classpath = sourceSets.main.runtimeClasspath
+    main = "mylib.MyTopLevelVhdl"
+}
+
+task runSimulation(type: JavaExec) {
+    classpath = sourceSets.main.runtimeClasspath
+    main = "mylib.MyTopLevelSim"
+}

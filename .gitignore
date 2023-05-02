@@ -1,0 +1,51 @@
+*.log
+*.bak
+
+# gradle specific
+.gradle
+build
+
+# Scala-IDE specific
+.scala_dependencies
+.worksheet
+
+.idea
+out
+
+# Eclipse
+bin/
+.classpath
+.project
+.settings
+.cache-main
+
+# IntelliJ
+.idea
+*.iws
+*.iml
+*.ipr
+
+#User
+/*.vhd
+/*.v
+*.cf
+*.json
+*.vcd
+!tester/src/test/resources/*.vhd
+
+# SpinalHDL
+simWorkspace/
+tmp/
+
+#metals
+.metals/
+
+#vscode
+.vscode/
+
+#bloop
+.bloop/
+
+
+# output verilog
+verilog/
